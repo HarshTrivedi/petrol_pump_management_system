@@ -1,6 +1,5 @@
-<h1>Editing petrol_pump_station</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @petrol_pump_station %> |
-<%= link_to 'Back', petrol_pump_stations_path %>
+<%- model_class = PetrolPumpStation -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => PetrolPumpStation %></h1>
+</div>
+<%= render :partial => 'form' %>
