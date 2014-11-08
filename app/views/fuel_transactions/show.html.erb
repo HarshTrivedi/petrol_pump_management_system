@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transactions:</strong>
+  <%= @fuel_transaction.transactions %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @fuel_transaction.quantity %>
+</p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @fuel_transaction.machine_id %>
+</p>
+
+<%= link_to 'Edit', edit_fuel_transaction_path(@fuel_transaction) %> |
+<%= link_to 'Back', fuel_transactions_path %>

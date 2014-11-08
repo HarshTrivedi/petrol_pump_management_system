@@ -1,0 +1,29 @@
+<h1>Listing fuel_transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transactions</th>
+      <th>Quantity</th>
+      <th>Machine</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fuel_transactions.each do |fuel_transaction| %>
+      <tr>
+        <td><%= fuel_transaction.transactions %></td>
+        <td><%= fuel_transaction.quantity %></td>
+        <td><%= fuel_transaction.machine_id %></td>
+        <td><%= link_to 'Show', fuel_transaction %></td>
+        <td><%= link_to 'Edit', edit_fuel_transaction_path(fuel_transaction) %></td>
+        <td><%= link_to 'Destroy', fuel_transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fuel transaction', new_fuel_transaction_path %>

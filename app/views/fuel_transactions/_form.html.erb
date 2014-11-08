@@ -1,0 +1,13 @@
+<%= simple_form_for(@fuel_transaction) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :transactions %>
+    <%= f.input :quantity %>
+    <%= f.input :machine_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
