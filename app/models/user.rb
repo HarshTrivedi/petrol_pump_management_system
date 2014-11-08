@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   #->Prelang (user_login:devise/username_login_support)
   belongs_to :petrol_pump_station
   has_many :owners
+  has_many :managers
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
