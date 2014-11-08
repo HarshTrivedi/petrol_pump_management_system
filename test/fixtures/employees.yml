@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  petrol_pump_station_id: 
+  name: MyString
+  joining_date: 2014-11-08
+  position: MyString
+  salary: 1.5
+  attendance_id: 
+
+two:
+  petrol_pump_station_id: 
+  name: MyString
+  joining_date: 2014-11-08
+  position: MyString
+  salary: 1.5
+  attendance_id: 
