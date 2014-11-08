@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transactions_id: 
+  quantity: 1.5
+  machine_id: 1
+
+two:
+  transactions_id: 
+  quantity: 1.5
+  machine_id: 1
