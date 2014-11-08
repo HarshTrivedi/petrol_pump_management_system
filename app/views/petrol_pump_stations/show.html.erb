@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @petrol_pump_station.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @petrol_pump_station.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @petrol_pump_station.state %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @petrol_pump_station.street_address %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @petrol_pump_station.pincode %>
+</p>
+
+<%= link_to 'Edit', edit_petrol_pump_station_path(@petrol_pump_station) %> |
+<%= link_to 'Back', petrol_pump_stations_path %>
