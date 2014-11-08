@@ -1,29 +1,38 @@
-<h1>Listing fuel_transactions</h1>
-
-<table>
+<%- model_class = FuelTransaction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => FuelTransaction %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Transactions</th>
-      <th>Quantity</th>
-      <th>Machine</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:quantity) %></th>
+      <th><%= model_class.human_attribute_name(:machine_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @fuel_transactions.each do |fuel_transaction| %>
       <tr>
-        <td><%= fuel_transaction.transactions %></td>
+        <td><%= fuel_transaction.id %></td>
         <td><%= fuel_transaction.quantity %></td>
         <td><%= fuel_transaction.machine_id %></td>
-        <td><%= link_to 'Show', fuel_transaction %></td>
-        <td><%= link_to 'Edit', edit_fuel_transaction_path(fuel_transaction) %></td>
-        <td><%= link_to 'Destroy', fuel_transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l fuel_transaction.created_at, format: :long %></td>
+        <td>
+          <%= link_to fuel_transaction_path(fuel_transaction), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to fuel_transaction_path(fuel_transaction), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Fuel transaction', new_fuel_transaction_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_fuel_transaction_path,
+            :class => 'btn btn-primary' %>
