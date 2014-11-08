@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  petrol_pump_station_id: 
+  name: MyString
+  residence_number: MyString
+  mobile_number: MyString
+
+two:
+  petrol_pump_station_id: 
+  name: MyString
+  residence_number: MyString
+  mobile_number: MyString
