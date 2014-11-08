@@ -1,0 +1,12 @@
+<%= simple_form_for(@non_fuel_transaction) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :transactions %>
+    <%= f.association :product %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

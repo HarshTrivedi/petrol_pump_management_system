@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :non_fuel_transactions
+
   resources :products
 
   resources :owners

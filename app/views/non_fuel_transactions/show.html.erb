@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transactions:</strong>
+  <%= @non_fuel_transaction.transactions %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @non_fuel_transaction.product %>
+</p>
+
+<%= link_to 'Edit', edit_non_fuel_transaction_path(@non_fuel_transaction) %> |
+<%= link_to 'Back', non_fuel_transactions_path %>
