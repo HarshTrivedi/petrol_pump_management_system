@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  payment_mode: MyString
+  actual_total_price: 1.5
+  tax: 1.5
+  vat: 1.5
+  date: 2014-11-08
+
+two:
+  customer_id: 
+  payment_mode: MyString
+  actual_total_price: 1.5
+  tax: 1.5
+  vat: 1.5
+  date: 2014-11-08
