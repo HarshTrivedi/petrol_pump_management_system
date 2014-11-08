@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tank_id: 
+  date: 2014-11-08
+  opening_quantity: 1.5
+  closing_quantity: 1.5
+
+two:
+  tank_id: 
+  date: 2014-11-08
+  opening_quantity: 1.5
+  closing_quantity: 1.5
