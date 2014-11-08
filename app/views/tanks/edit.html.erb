@@ -1,6 +1,5 @@
-<h1>Editing tank</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @tank %> |
-<%= link_to 'Back', tanks_path %>
+<%- model_class = Tank -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Tank %></h1>
+</div>
+<%= render :partial => 'form' %>
