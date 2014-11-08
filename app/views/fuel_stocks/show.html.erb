@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tank:</strong>
+  <%= @fuel_stock.tank %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @fuel_stock.date %>
+</p>
+
+<p>
+  <strong>Opening quantity:</strong>
+  <%= @fuel_stock.opening_quantity %>
+</p>
+
+<p>
+  <strong>Closing quantity:</strong>
+  <%= @fuel_stock.closing_quantity %>
+</p>
+
+<%= link_to 'Edit', edit_fuel_stock_path(@fuel_stock) %> |
+<%= link_to 'Back', fuel_stocks_path %>

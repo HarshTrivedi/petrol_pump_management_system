@@ -1,0 +1,14 @@
+<%= simple_form_for(@fuel_stock) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :tank %>
+    <%= f.input :date %>
+    <%= f.input :opening_quantity %>
+    <%= f.input :closing_quantity %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

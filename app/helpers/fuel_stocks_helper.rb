@@ -1,0 +1,2 @@
+module FuelStocksHelper
+end
