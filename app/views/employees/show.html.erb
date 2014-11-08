@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Petrol pump station:</strong>
+  <%= @employee.petrol_pump_station %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Joining date:</strong>
+  <%= @employee.joining_date %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @employee.position %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @employee.salary %>
+</p>
+
+<p>
+  <strong>Attendance:</strong>
+  <%= @employee.attendance %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
