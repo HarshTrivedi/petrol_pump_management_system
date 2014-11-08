@@ -1,0 +1,27 @@
+<h1>Listing fuel_prices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fuel_prices.each do |fuel_price| %>
+      <tr>
+        <td><%= fuel_price.type %></td>
+        <td><%= fuel_price.price %></td>
+        <td><%= link_to 'Show', fuel_price %></td>
+        <td><%= link_to 'Edit', edit_fuel_price_path(fuel_price) %></td>
+        <td><%= link_to 'Destroy', fuel_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fuel price', new_fuel_price_path %>

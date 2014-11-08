@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :fuel_prices
+
   resources :petrol_pump_stations
 
   resources :tanks

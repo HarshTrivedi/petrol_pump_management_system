@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @fuel_price.type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @fuel_price.price %>
+</p>
+
+<%= link_to 'Edit', edit_fuel_price_path(@fuel_price) %> |
+<%= link_to 'Back', fuel_prices_path %>
