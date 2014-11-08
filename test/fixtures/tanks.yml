@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  capacity: 1
+  fuel_type: MyString
+  petrol_pump_station_id: 
+
+two:
+  capacity: 1
+  fuel_type: MyString
+  petrol_pump_station_id: 
