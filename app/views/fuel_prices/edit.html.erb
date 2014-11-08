@@ -1,6 +1,5 @@
-<h1>Editing fuel_price</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @fuel_price %> |
-<%= link_to 'Back', fuel_prices_path %>
+<%- model_class = FuelPrice -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => FuelPrice %></h1>
+</div>
+<%= render :partial => 'form' %>

@@ -1,14 +1,26 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = FuelPrice -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => FuelPrice %></h1>
+</div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @fuel_price.type %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:type) %></dt>
+      <dd><pre class="prettyprint"><%= @fuel_price.type %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:price) %></dt>
+      <dd><pre class="prettyprint"><%= @fuel_price.price %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @fuel_price.price %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              fuel_prices_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_fuel_price_path(@fuel_price), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              fuel_price_path(@fuel_price),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<%= link_to 'Edit', edit_fuel_price_path(@fuel_price) %> |
-<%= link_to 'Back', fuel_prices_path %>
