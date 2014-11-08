@@ -1,34 +1,32 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Transactions -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Transactions %></h1>
+</div>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @transaction.customer %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:payment_mode) %></dt>
+      <dd><pre class="prettyprint"><%= @transactions.payment_mode %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:actual_total_price) %></dt>
+      <dd><pre class="prettyprint"><%= @transactions.actual_total_price %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:tax) %></dt>
+      <dd><pre class="prettyprint"><%= @transactions.tax %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:vat) %></dt>
+      <dd><pre class="prettyprint"><%= @transactions.vat %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:date) %></dt>
+      <dd><pre class="prettyprint"><%= @transactions.date %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Payment mode:</strong>
-  <%= @transaction.payment_mode %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              transactions_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_transactions_path(@transactions), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              transactions_path(@transactions),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Actual total price:</strong>
-  <%= @transaction.actual_total_price %>
-</p>
-
-<p>
-  <strong>Tax:</strong>
-  <%= @transaction.tax %>
-</p>
-
-<p>
-  <strong>Vat:</strong>
-  <%= @transaction.vat %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @transaction.date %>
-</p>
-
-<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
-<%= link_to 'Back', transactions_path %>
