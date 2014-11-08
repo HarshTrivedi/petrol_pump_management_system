@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :vehicles
+
   resources :transactions
 
   resources :fuel_transactions
